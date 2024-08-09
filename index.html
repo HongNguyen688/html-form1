@@ -1,0 +1,133 @@
+<html>
+    <head>
+        <title>Forms</title>
+    </head>
+    <body>
+        <form action="http://www.example.com/review.php" method="get">
+
+            <!-- <fieldset> Grouping form elements, <legend> help identify the purpose of that group-->
+            <fieldset>
+                <legend>
+                    Your Details:
+                </legend>
+                <!--Text, email and password input-->
+                <label>
+                    Name: 
+                    <input type="text" name="name" size="30" maxlength="100"> 
+                </label>
+                <br />
+                <label>
+                    Email: 
+                    <input type="text" name="name" size="30" maxlength="100"> 
+                </label>
+                <br />
+                <lable>
+                    Password:
+                    <input type="password" name="password" size="30" maxlength="100">
+                </lable>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>
+                    Your Review: 
+                </legend>
+                <!-- Drop-down list box-->
+                <p>
+                    <label for="hear-about">
+                        How did you hear about us?
+                    </label>
+                    <select name="referrer" id="hear-about">
+                        <option value="google">Google</option>
+                        <option value="friend">Friend</option>
+                        <option value="advert">Advert</option>
+                        <option value="other">Other</option>
+                    </select>
+                </p>
+
+                <!--Multiple select box-->
+                <p>
+                    Do you play any of the following instruments? <br> (You can select more than one option by <strong>holding down control on a PC or command key on a Mac</strong> while selecting different options.)
+                    <br>
+                    <select name="instruments" size="4" multiple="multiple">
+                        <option value="guitar" selected="selected"> Guitar</option>
+                        <option value="drums">Drums</option>
+                        <option value="bass">Bass</option>
+                        <option value="piano">Piano</option>
+                    </select>
+                    <br>
+                </p>
+
+                <!--Button & hidden controls-->
+                <button>
+                    <img src="images/add.gif" alt="add" width="10" height="10" /> Add 
+                </button>
+                <input type="hidden" name="bookmark" value="lyrics"/> <!--allow web page authors to add values to form that users cannot see-->
+                <br>
+
+                <!-- Date Input -->
+                <label for="username"> Departure Date:</label>
+                <input type="date" name="depart"/>
+                <input type="submit" value="Submit"/>
+
+                <!-- Search input. With the normal search you don't need to use "placeholder"-->
+                <p>
+                    Search:
+                    <br>
+                <input type="search" name="search"
+                    placeholder="Enter Keyword" />
+                <input type="submit" value="Search"/>
+                <br>
+                </p>
+
+                <!--Email & URL input. With email change type and name ="email"-->
+                <p>
+                    Please enter your website address:
+                    <br>
+                    <input type="url" name="website" />
+                    <input type="submit" value="Submit"/>
+                </p>
+
+                <!--File input box-->
+                <p>
+                    Upload your song in MP3 format:
+                </p>
+                <input type="file" name="user-song"/> <br>
+                <input type="submit" value="Upload" />
+
+                <!--Labelling form Controls, radio buttons-->
+                <p>
+                    Would you visit again?
+                    <br>
+                    <label> 
+                        <input type="radio" name="rating" value="yes"/> Yes
+                    </label>
+                    <label>
+                        <input type="radio" name="rating" value="no"/> No 
+                    </label>
+                    <label>
+                        <input type="radio" name="rating" value="maybe"/> Maybe 
+                    </label>
+                </p>
+
+                <!--Text area-->
+                <p>
+                    <label for="comments">
+                        Comments:
+                    </label>
+                    <br>
+                    <textarea rows="4" cols="40" id="comments"> </textarea>
+                </p>
+
+                <!--Checkbox-->
+                <label>
+                    <input type="checkbox" name="subscribe" checked="checked"/> Sign me up for email updates
+                    <input type="checkbox" name="unsubscribe" value="maybelater"/> Maybe later
+                </label>
+                <br>
+                <!--Submit Button and image button: < input type="image" src="images/subscribe.jpg" width="100" height="20"-->
+                <input type="submit" value="Submit review"/>
+            </fieldset>
+        </form>
+    </body>
+</html>
+
